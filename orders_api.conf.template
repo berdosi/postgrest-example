@@ -1,0 +1,11 @@
+db-uri = "postgres://USER_PLACEHOLDER:PASSWORD_PLACEHOLDER@/DATABASE_PLACEHOLDER"
+db-schema = "api" # this schema gets added to the search_path of every request
+db-anon-role = "web_anon"
+db-pool = 10
+db-pool-timeout = 10
+
+server-host = "!4"
+server-port = 3000
+
+jwt-secret = "SECRET_PLACEHOLDER"
+
