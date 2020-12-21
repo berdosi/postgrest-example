@@ -32,8 +32,8 @@ CREATE FUNCTION "api"."order"(param json) RETURNS VOID AS $SQL$
         IF "current_user_id" IS NULL THEN
             RAISE EXCEPTION 'NOT LOGGED IN';
         END IF;
-        
-        INSERT INTO "master_data"."order" ("user_id") VALUES 
+
+        INSERT INTO "master_data"."order" ("user_id") VALUES
             ("current_user_id")
             RETURNING "id"
             INTO "order_id_new";

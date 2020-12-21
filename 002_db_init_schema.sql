@@ -81,12 +81,12 @@ CREATE VIEW "master_data"."price" AS
         id DESC;
 
 CREATE VIEW "master_data"."stock" AS
-    SELECT 
+    SELECT
         "sku_id"        AS "sku_id",
-        SUM("amount")   AS "amount" 
-    
+        SUM("amount")   AS "amount"
+
     FROM (
-            SELECT 
+            SELECT
                 "sku_id",
                 -"amount" "amount"
             FROM
